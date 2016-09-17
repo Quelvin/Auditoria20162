@@ -60,7 +60,7 @@
           <div class="navigation ">
             <nav>
               <ul class="sf-menu">
-               <li><a href="index.html">Inicio</a></li>
+               <li><a href="inicio.html">Inicio</a></li>
              </ul>
             </nav>
             <div class="clear"></div>
@@ -79,15 +79,39 @@
     <div class="row">
       <div class="grid_12">
         <h3>Entrada de veiculo</h3>
-        <img src="images/page2_img.jpg" alt="" class="img_inner fleft">
-        <div class="extra_wrapper">
-          <p class="fwn"><a href="#">Livamus at magna non nunc tristique rhoncus. Aliquam nibh ante, egestas id dictum a, commodo luctus liberoret. Praesenter faucibus malesuada faucibus. Donec laoreet metus id laoreet malesuada. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam consectetur orci sed nulla facilisis consequa. </a></p>
-          Curabitur vel lorem sit amet nulla ullamcorper fermentum. In vitae varius augue, eu consectetur ligula. Etiam dui eros, laoreet site amet est vel, commodo venenatis eros. Fusce adipiscing quam id risus sagittis, non consequat lacus interdumertolo mokiju werto nulla, eu sodales arcu. Quisque viverra nulla nunc, eu ultrices libero ultricies eget. Phasellus accumsan justo vitae feugiat placerat. Praesent vel ultrices velit. Suspendisse risus justo, lacinia vitae eleifend sed, cursus sit amet. Huisque viverra nulla nunc, eu ultrices libero ultricies eget. Ohasellus accumsajusto vitae feugiat placerat. Praesent vel ultrices velit. Suspendisse risus justo, lacinia vitae eleifend sed, cursus sit amet ertolomino kolinomi holo. 
-        </div>
+       
+			<form class="form-horizontal">	
+			    <div class="form-group">
+			    	<label for="inputEmail" class="control-label col-xs-10">Placa</label>
+			        <div class="col-xs-30">
+			            <input type="text" class="form-control input-lg-50" id="inputPlaca" size="50%" placeholder="ABC1234">
+			        </div>
+			    </div>
+			    <div class="form-group">
+			        <label for="inputPassword" class="control-label col-xs-10">Veiculo</label>
+			        <div class="col-xs-30">
+			            <input type="text" class="form-control" id="inputVeiculo" size="50%" placeholder="GOL">
+			        </div>
+			    </div>
+			       <div class="form-group">
+			        <label for="inputPassword" class="control-label col-xs-10">Cliente</label>
+			        <div class="col-xs-30">
+			            <select>
+			            	<option>Selecionar</option>
+			            </select>
+			            <button id="btn_adc_cli">+</button>
+			        </div>
+			    </div>
+			    <div class="form-group">
+			        <div class="col-xs-offset-2 col-xs-10">
+			            <button type="submit" class="btn btn-primary">Cadastrar</button>
+			        </div>
+			    </div>
+			</form>     
+       
       </div>
     </div>
   </div>
-
 </section>
 <!--==============================
               footer
