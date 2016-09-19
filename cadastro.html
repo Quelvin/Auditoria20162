@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Cadasro</title>
+<meta charset="utf-8">
+<meta name="format-detection" content="telephone=no" />
+<link rel="icon" href="images/favicon.ico">
+<link rel="shortcut icon" href="images/favicon.ico" />
+<link rel="stylesheet" href="css/style.css">
+<script src="js/jquery.js"></script>
+<script src="js/jquery-migrate-1.1.1.js"></script>
+<script src="js/jquery.easing.1.3.js"></script>
+<script src="js/script.js"></script> 
+<script src="js/superfish.js"></script>
+<script src="js/jquery.equalheights.js"></script>
+<script src="js/jquery.mobilemenu.js"></script>
+<script src="js/tmStickUp.js"></script>
+<script src="js/jquery.ui.totop.js"></script>
+<script>
+ $(window).load(function(){
+  $().UItoTop({ easingType: 'easeOutQuart' });
+  $('#stuck_container').tmStickUp({});  
+ }); 
+</script>
+<!--[if lt IE 8]>
+ <div style=' clear: both; text-align:center; position: relative;'>
+   <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+     <img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." />
+   </a>
+</div>
+<![endif]-->
+<!--[if lt IE 9]>
+<script src="js/html5shiv.js"></script>
+<link rel="stylesheet" media="screen" href="css/ie.css">
+<![endif]-->
+</head>
+<body>
+<!--==============================
+              header
+=================================-->
+<header>
+  <div class="container">
+    <div class="row">
+      <div class="grid_12 rel">
+        <h1>
+          <a href="index.html">
+            <img src="images/logo.png" alt="Logo alt">
+          </a>
+        </h1>
+      </div>
+    </div>
+  </div>
+  <section id="stuck_container">
+  <!--==============================
+              Stuck menu
+  =================================-->
+    <div class="container">
+      <div class="row">
+        <div class="grid_12 ">
+          <div class="navigation ">
+            <nav>
+              <ul class="sf-menu">
+               <li><a href="inicio.html">Inicio</a></li>
+               <li><a href="sobre.html">Sobre</a></li>
+               <li class="current"><a href="cadastro.html">Cadastro</a></li>
+               <li><a href="financeiro.html">Financeiro</a></li>
+               <li><a href="contato.html">Contato</a></li>
+             </ul>
+            </nav>
+            <div class="clear"></div>
+          </div>       
+         <div class="clear"></div>  
+        </div>
+     </div> 
+    </div> 
+  </section>
+</header>
+<!--=====================
+          Content
+======================-->
+<section id="content"><div class="ic">More Website Templates @ TemplateMonster.com - July 28, 2014!</div>
+  <div class="container">
+    <div class="row">
+      <div class="grid_12">
+        <h3>Cadastros</h3>    
+      </div>
+      <div class="grid_1">
+        <div class="text2 color1">
+          <a href="#usuario">Usuarios</a>
+        </div>
+      </div>
+      <div class="grid_1">
+        <div class="text2 color1">
+          <a href="#cliente">Clientes</a>
+        </div>
+      </div>
+      <div class="grid_1">
+        <div class="text2 color1">
+          <a href="#veiculo">Veiculos</a>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  
+</section>
+<section id="content">
+  <section id="usuario">
+    <div class="container">
+      <div class="row">
+        <div class="grid_12">
+          <h3>Cadastro de usuário</h3>
+            <form class="form-horizontal">  
+                <div class="form-group">
+                  <label for="inputNome" class="control-label col-xs-10">Nome</label>
+                    <div class="col-xs-30">
+                        <input type="text" class="form-control input-lg-50" id="inputNome" size="50%" placeholder="Julio">
+                    </div>
+                </div><br>
+                <div class="form-group">
+                    <label for="inputEmail" class="control-label col-xs-10">Veiculo</label>
+                    <div class="col-xs-30">
+                        <input type="Email" class="form-control" id="inputemail" size="50%" placeholder="julio_242524@hotmail.com">
+                    </div>
+                </div><br>
+                <div class="form-group">
+                  <label for="inputLogin" class="control-label col-xs-10">Login</label>
+                    <div class="col-xs-30">
+                        <input type="text" class="form-control input-lg-50" id="inputLogin" size="50%" placeholder="Juli024">
+                    </div>
+                </div><br>
+                <div class="form-group">
+                  <label for="inputSenha" class="control-label col-xs-10">Senha</label>
+                    <div class="col-xs-30">
+                        <input type="password" class="form-control input-lg-50" id="inputsenha" size="50%" placeholder="Utilize letras, numeos e caracteres">
+                    </div>
+                </div><br>
+                <div class="form-group">
+                  <label for="inputCnfSenha" class="control-label col-xs-10">Confirmar senha</label>
+                    <div class="col-xs-30">
+                        <input type="password" class="form-control input-lg-50" id="inputCnfSenha" size="50%" placeholder="Utilize letras, numeos e caracteres">
+                    </div>
+                </div><br>
+                <div class="form-group">
+                  <label for="inputCnfSenha" class="control-label col-xs-10">Nível</label>
+                    <div class="col-xs-30">
+                        <select id="nivelSenha" name="nivelSenha">
+                          <option>Selecionar</option>
+                          <option>1</option>
+                          <option>2</option>
+                          <option>3</option>
+                          <option>4</option>
+                          <option>5</option>
+                          <option>6</option>
+                          <option>7</option>
+                          <option>8</option>
+                          <option>9</option>
+                          <option>10</option>
+                        </select>
+                    </div>
+                </div><br>
+                <div class="form-group">
+                    <div class="col-xs-offset-2 col-xs-10">
+                        <button type="submit" class="btn btn-primary">Cadastrar</button>
+                    </div>
+                </div>
+            </form>     
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="cliente">
+   <div class="container">
+    <div class="row">
+      <div class="grid_12">
+        <h3>Cadastro de cliente</h3>
+      <form class="form-horizontal" action="php/insere_cliente.php" method="post">  
+          <div class="form-group">
+            <label for="inputNome" class="control-label col-xs-10">Nome</label>
+              <div class="col-xs-30">
+                  <input type="text" class="form-control input-lg-50" id="inputNome" name="inputNome" size="50%" placeholder="Bruno Coelho">
+              </div>
+          </div>
+          <div class="form-group">
+              <label for="inputNome" class="control-label col-xs-10">Telefone</label>
+              <div class="col-xs-30">
+                  <input type="text" class="form-control" id="inputTelefone" name="inputTelefone" size="50%" placeholder="32232424">
+              </div>
+          </div>
+             <div class="form-group">
+              <label for="inputPassword" class="control-label col-xs-10">Email</label>
+              <div class="col-xs-30">
+                <input type="email" class="form-control" id="inputEmail" name="inputEmail" size="50%" placeholder="bruno_9992425@yahoo.com">
+              </div>
+          </div>
+          <div class="form-group">
+              <div class="col-xs-offset-2 col-xs-10">
+                  <button type="submit" id="enviar_cliente" class="btn btn-primary">Cadastrar</button>
+              </div>
+          </div>
+      </form>     
+      </div>
+    </div>
+  </div>
+  </section>
+  <section id="veiculo">
+   <div class="container">
+    <div class="row">
+      <div class="grid_12">
+        <h3>Cadastro de veiculo</h3>
+        <form class="form-horizontal">  
+            <div class="form-group">
+              <label for="inputPlaca" class="control-label col-xs-10">Placa</label>
+                <div class="col-xs-30">
+                    <input type="text" class="form-control input-lg-50" id="inputPlaca" size="50%" placeholder="ABC1234">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputPassword" class="control-label col-xs-10">Veiculo</label>
+                <div class="col-xs-30">
+                    <input type="text" class="form-control" id="inputVeiculo" size="50%" placeholder="GOL">
+                </div>
+            </div>
+               <div class="form-group">
+                <label for="inputPassword" class="control-label col-xs-10">Cliente</label>
+                <div class="col-xs-30">
+                    
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-xs-offset-2 col-xs-10">
+                    <button type="submit" class="btn btn-primary">Cadastrar</button>
+                </div>
+            </div>
+        </form>     
+      </div>
+    </div>
+  </div>
+  </section>
+</section>
+<!--==============================
+              footer
+=================================-->
+<footer id="footer">
+  <div class="container">
+    <div class="row">
+      <div class="grid_12"> 
+        <div class="copyright"><span class="brand">Stable</span> &copy; <span id="copyright-year"></span> | <a href="#">Privacy Policy</a>
+          <div class="sub-copy">Website designed by <a href="http://www.templatemonster.com/" rel="nofollow">TemplateMonster.com</a></div>
+        </div>
+      </div>
+    </div>
+  </div>  
+</footer>
+<a href="#" id="toTop" class="fa fa-chevron-up"></a>
+</body>
+</html>
