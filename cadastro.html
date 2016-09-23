@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Cadasro</title>
+<title>Cadastro</title>
 <meta charset="utf-8">
 <meta name="format-detection" content="telephone=no" />
 <link rel="icon" href="images/favicon.ico">
@@ -110,41 +110,41 @@
       <div class="row">
         <div class="grid_12">
           <h3>Cadastro de usuário</h3>
-            <form class="form-horizontal">  
+            <form class="form-horizontal" action="/stable/php/insere_usuario" method="post">  
                 <div class="form-group">
                   <label for="inputNome" class="control-label col-xs-10">Nome</label>
                     <div class="col-xs-30">
-                        <input type="text" class="form-control input-lg-50" id="inputNome" size="50%" placeholder="Julio">
+                        <input type="text" class="form-control input-lg-50" name="inputNome" size="50%" placeholder="Julio">
                     </div>
                 </div><br>
                 <div class="form-group">
-                    <label for="inputEmail" class="control-label col-xs-10">Veiculo</label>
+                    <label for="inputEmail" class="control-label col-xs-10">Email</label>
                     <div class="col-xs-30">
-                        <input type="Email" class="form-control" id="inputemail" size="50%" placeholder="julio_242524@hotmail.com">
+                        <input type="Email" class="form-control" name="inputemail" size="50%" placeholder="julio_242524@hotmail.com">
                     </div>
                 </div><br>
                 <div class="form-group">
                   <label for="inputLogin" class="control-label col-xs-10">Login</label>
                     <div class="col-xs-30">
-                        <input type="text" class="form-control input-lg-50" id="inputLogin" size="50%" placeholder="Juli024">
+                        <input type="text" class="form-control input-lg-50" name="inputLogin" size="50%" placeholder="Juli024">
                     </div>
                 </div><br>
                 <div class="form-group">
                   <label for="inputSenha" class="control-label col-xs-10">Senha</label>
                     <div class="col-xs-30">
-                        <input type="password" class="form-control input-lg-50" id="inputsenha" size="50%" placeholder="Utilize letras, numeos e caracteres">
+                        <input type="password" class="form-control input-lg-50" name="inputsenha" size="50%" placeholder="Utilize letras, numeos e caracteres">
                     </div>
                 </div><br>
                 <div class="form-group">
                   <label for="inputCnfSenha" class="control-label col-xs-10">Confirmar senha</label>
                     <div class="col-xs-30">
-                        <input type="password" class="form-control input-lg-50" id="inputCnfSenha" size="50%" placeholder="Utilize letras, numeos e caracteres">
+                        <input type="password" class="form-control input-lg-50" name="inputCnfSenha" size="50%" placeholder="Utilize letras, numeos e caracteres">
                     </div>
                 </div><br>
                 <div class="form-group">
                   <label for="inputCnfSenha" class="control-label col-xs-10">Nível</label>
                     <div class="col-xs-30">
-                        <select id="nivelSenha" name="nivelSenha">
+                        <select name="nivelSenha" name="nivelSenha">
                           <option>Selecionar</option>
                           <option>1</option>
                           <option>2</option>
@@ -174,7 +174,7 @@
     <div class="row">
       <div class="grid_12">
         <h3>Cadastro de cliente</h3>
-      <form class="form-horizontal" action="php/insere_cliente.php" method="post">  
+      <form class="form-horizontal" action="/stable/php/insere_cliente.php" method="post">  
           <div class="form-group">
             <label for="inputNome" class="control-label col-xs-10">Nome</label>
               <div class="col-xs-30">
@@ -195,7 +195,7 @@
           </div>
           <div class="form-group">
               <div class="col-xs-offset-2 col-xs-10">
-                  <button type="submit" id="enviar_cliente" class="btn btn-primary">Cadastrar</button>
+                  <button type="submit" id="enviar_cliente" name="enviar_cliente" class="btn btn-primary">Cadastrar</button>
               </div>
           </div>
       </form>     
@@ -208,28 +208,43 @@
     <div class="row">
       <div class="grid_12">
         <h3>Cadastro de veiculo</h3>
-        <form class="form-horizontal">  
-            <div class="form-group">
-              <label for="inputPlaca" class="control-label col-xs-10">Placa</label>
-                <div class="col-xs-30">
-                    <input type="text" class="form-control input-lg-50" id="inputPlaca" size="50%" placeholder="ABC1234">
-                </div>
-            </div>
-            <div class="form-group">
+        <form class="form-horizontal" method="post" action="/stable/php/insere_veiculo.php">
+          <div class="form-group">
                 <label for="inputPassword" class="control-label col-xs-10">Veiculo</label>
                 <div class="col-xs-30">
-                    <input type="text" class="form-control" id="inputVeiculo" size="50%" placeholder="GOL">
+                    <input type="text" class="form-control" name="inputNome" size="50%" placeholder="GOL">
                 </div>
-            </div>
-               <div class="form-group">
-                <label for="inputPassword" class="control-label col-xs-10">Cliente</label>
+            </div>  
+              <div class="form-group">
+              <label for="inputPlaca" class="control-label col-xs-10">Cadastrados</label>
                 <div class="col-xs-30">
-                    
+                   <select>
+                      <?php
+
+                        include '/stable/php/_conexao.php';
+
+                        $sql = mysqli_query("SELECT * FROM veiculo ;");
+
+                        $result = mysqli_query($con,$sql)
+                        while ($row = mysql_fetch_array($result)){
+
+                        echo '<option value="'.$row['id'].'" selected="selected">'.$row['nome'].'</option>';
+
+
+                        }
+
+                          mysqli_close($con);
+
+  
+                      ?>
+                     
+                   </select>
+                   <input type="button" name="apagar" value="Apagar">
                 </div>
             </div>
             <div class="form-group">
                 <div class="col-xs-offset-2 col-xs-10">
-                    <button type="submit" class="btn btn-primary">Cadastrar</button>
+                    <button type="submit" value="enviar_veiculo" name="enviar_veiculo" class="btn btn-primary">Cadastrar</button>
                 </div>
             </div>
         </form>     

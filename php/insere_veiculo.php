@@ -1,15 +1,17 @@
 <?php
 
-	include('_conexao.php');
+	include '_conexao.php';
 
-	if (isset($_POST['enviar_cliente'])) {
+	if (isset($_POST['enviar_veiculo'])) {
     
     $nome = strip_tags(trim($_POST['inputNome']));
-    $telefone = strip_tags(trim($_POST['inputTelefone']));
-    $email = strip_tags($_POST['inputEmail']);
     
+    
+    
+   
 
-	$sqlquery = "INSERT INTO cliente (nome,telefone,email) VALUES ('$nome',$telefone,'$email');";
+	$sqlquery = "INSERT INTO veiculo (nome) VALUES ('$nome');";
+  
 
     if ($con->query($sqlquery) === TRUE) {
 
@@ -23,6 +25,12 @@
 
     //mysqli_query($con, $sqlquery);
 
+    
+    
+
+
+ 
+
     	
 
 
@@ -33,5 +41,3 @@
    
     
 }
-
-

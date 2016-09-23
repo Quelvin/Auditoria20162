@@ -78,37 +78,38 @@
   <div class="container">
     <div class="row">
       <div class="grid_12">
+        <div class="contact-form-loader">
         <h3>Entrada de veiculo</h3>
        
-			<form class="form-horizontal">	
-			    <div class="form-group">
-			    	<label for="inputEmail" class="control-label col-xs-10">Placa</label>
-			        <div class="col-xs-30">
-			            <input type="text" class="form-control input-lg-50" id="inputPlaca" size="50%" placeholder="ABC1234">
-			        </div>
-			    </div>
-			    <div class="form-group">
-			        <label for="inputPassword" class="control-label col-xs-10">Veiculo</label>
-			        <div class="col-xs-30">
-			            <input type="text" class="form-control" id="inputVeiculo" size="50%" placeholder="GOL">
-			        </div>
-			    </div>
-			       <div class="form-group">
-			        <label for="inputPassword" class="control-label col-xs-10">Cliente</label>
-			        <div class="col-xs-30">
-			            <select>
-			            	<option>Selecionar</option>
-			            </select>
-			            <button id="btn_adc_cli">+</button>
-			        </div>
-			    </div>
-			    <div class="form-group">
-			        <div class="col-xs-offset-2 col-xs-10">
-			            <button type="submit" class="btn btn-primary">Cadastrar</button>
-			        </div>
-			    </div>
-			</form>     
-       
+  			<form class="form-horizontal">	
+  			    <div class="form-group">
+  			    	<label for="inputEmail" class="control-label col-xs-10">Placa</label>
+  			        <div class="col-xs-30">
+  			            <input type="text" class="form-control input-lg-50" id="inputPlaca" size="50%" placeholder="ABC1234" data-constraints="@Required @JustLetters">
+  			        </div>
+  			    </div>
+  			    <div class="form-group">
+  			        <label for="inputPassword" class="control-label col-xs-10">Veiculo</label>
+  			        <div class="col-xs-30">
+  			            <input type="text"  id="inputVeiculo" placeholder="GOL">
+  			        </div>
+  			    </div>
+  			       <div class="form-group">
+  			        <label for="inputPassword" class="control-label col-xs-10">Cliente</label>
+  			        <div class="col-xs-30">
+  			            <select>
+  			            	<option>Selecionar</option>
+  			            </select>
+  			            <button id="btn_adc_cli">+</button>
+  			        </div>
+  			    </div>
+  			    <div class="form-group">
+  			        <div class="col-xs-offset-2 col-xs-10">
+  			            <button type="submit" class="btn btn-primary">Cadastrar</button>
+  			        </div>
+  			    </div>
+  			</form>     
+        </div>
       </div>
     </div>
   </div>
